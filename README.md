@@ -1,5 +1,6 @@
 # Kolokvij naloga - Node-RED
-# Getting started with Node-RED and Docker
+Repository for Node-RED presentation example for VR class. Includes instruction how to run the Node-RED example flow in a Docker container.
+## Getting started with Node-RED and Docker
 Install docker desktop and run command:
 ```
 docker run -it -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
@@ -37,4 +38,12 @@ Add the token into the field and choose a name for the discord bot.
 ![image](https://github.com/jangacnik/vr-kolokvij/assets/40426150/52fdb027-6a2d-49e1-be3c-c18199d76c05)
 
 You can find your token in your [discord developer portal page](https://discord.com/developers/applications) => My Appliactions => [My app] => Bot => Token
-Note that all Privileged Gateway Intents must be enabled
+
+Finally, add the Channel ID  which/from you want to read/write massages to/from for each Discord message node you use:
+
+![image](https://github.com/jangacnik/vr-kolokvij/assets/40426150/60bb8e4b-d752-4ea1-8bcb-17da45cdf97f)
+
+
+## Note
+All "Privileged Gateway Intents" in the discord bot settings must be enabled or else the docker image will not run.
+
